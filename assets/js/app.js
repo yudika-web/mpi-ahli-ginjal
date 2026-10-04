@@ -734,7 +734,7 @@ renderGame=function(){v7OldGameRender();const s=v7Session();if(s?.v===7&&!s.fini
 
 const v7Update3=simUpdateUI;simUpdateUI=function(initial=false){v7Update3(initial);const pic=document.querySelector('.v7-orient img');if(pic){pic.src=state.simulation.stage===0?V7_ASSETS.corpuscle:V7_ASSETS.kidney;pic.alt=state.simulation.stage===0?'Glomerulus di dalam kapsula Bowman, ilustrasi semi-realistis':'Potongan ginjal semi-realistis'}};
 
-const V8_ASSETS={"cover":"https://raw.githubusercontent.com/yudika-web/mpi-ahli-ginjal/main/Lab%20Ginjal%20Nefi.png","coverFallback":"assets/images/cover.webp","rbc":"assets/images/rbc.png","wheel":"assets/images/wheel.png"};
+const V8_ASSETS={"cover":"assets/images/cover_custom_v2.png","coverFallback":"assets/images/cover_custom_v2.png","rbc":"assets/images/rbc.png","wheel":"assets/images/wheel.png"};
 /* v8: compact workspace and physical arcade controls */
 const V8_VIEW={simTab:'arena',labTab:'text',labPage:0};
 V7_ASSETS.sel_darah_merah=V8_ASSETS.rbc;
