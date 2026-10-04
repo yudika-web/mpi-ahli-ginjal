@@ -295,3 +295,21 @@ body.v14-cinematic-mode #mainContent.shell.v9-screen[data-screen=aperception]{wi
 @media(max-width:900px) and (min-width:701px){#mainContent .v14-cinema.v14-question .v14-dialog{left:32%;right:14px;padding:12px 14px}#mainContent .v14-cinema.v14-question .v13-choices{grid-template-columns:1fr}#mainContent .v14-cinema.v14-question .v13-story-actions>span{display:none}}
 @media(max-width:700px){#mainContent .v14-cinema.v14-question .v13-actor.nefi{left:calc(50% - 72px);top:106px;bottom:auto;width:144px;height:144px;max-width:none;transform:none!important;translate:none!important}#mainContent .v14-cinema.v14-question .v14-dialog{left:10px;right:10px;bottom:max(10px,env(safe-area-inset-bottom));max-height:calc(100dvh - 268px - env(safe-area-inset-bottom,0px));padding:11px 13px;border-radius:16px}#mainContent .v14-cinema.v14-question .v13-speaker{margin-bottom:7px}#mainContent .v14-cinema.v14-question .v13-speaker strong{font-size:11px;padding:4px 10px}#mainContent .v14-cinema.v14-question .v13-speaker>span{font-size:9px}#mainContent .v14-cinema.v14-question #v13Speech{font-size:14px;line-height:1.45;margin-bottom:8px}#mainContent .v14-cinema.v14-question .v13-prompt{padding:8px 9px}#mainContent .v14-cinema.v14-question .v13-prompt legend,#mainContent .v14-cinema.v14-question .v13-prompt>label{font-size:12px}#mainContent .v14-cinema.v14-question .v13-choices{grid-template-columns:1fr;gap:6px}#mainContent .v14-cinema.v14-question .v13-choices label{font-size:12px}#mainContent .v14-cinema.v14-question .v13-story-actions{margin-top:8px;padding-top:8px}#mainContent .v14-cinema.v14-question .v13-story-actions>span{display:none}#mainContent .v14-cinema.v14-question .v13-prompt-foot .btn{font-size:11px;padding:6px 9px}}
 @media(max-height:500px) and (orientation:landscape){#mainContent .v14-cinema.v14-question .v13-actor.nefi{top:auto;left:2%;bottom:5%;width:27%;height:66%;max-width:340px}#mainContent .v14-cinema.v14-question .v14-dialog{left:32%;right:12px;bottom:8px;max-height:calc(100dvh - 105px);padding:10px 13px}#mainContent .v14-cinema.v14-question #v13Speech{font-size:14px}#mainContent .v14-cinema.v14-question .v13-story-actions>span{display:none}}
+
+/* GitHub Pages cover fix — primary raw GitHub image + local fallback */
+.v8-cover{
+  background-color:#071824;
+  background-image:linear-gradient(90deg,#061a2bed 0%,#061a2bba 36%,transparent 70%),var(--cover),var(--cover-fallback);
+  background-position:center,center,center;
+  background-size:auto,cover,cover;
+  background-repeat:no-repeat,no-repeat,no-repeat;
+}
+@media(max-width:799px){
+  .v8-cover{
+    background-color:#071824;
+    background-image:linear-gradient(0deg,#061a2bf7 0%,#061a2be6 34%,transparent 77%),var(--cover),var(--cover-fallback);
+    background-position:center,72% top,72% top;
+    background-size:auto,auto 68%,auto 68%;
+    background-repeat:no-repeat,no-repeat,no-repeat;
+  }
+}
