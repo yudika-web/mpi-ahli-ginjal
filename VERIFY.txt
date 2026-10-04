@@ -1,0 +1,7 @@
+assets_extracted: 62
+style_blocks_extracted: 12
+remaining_inline_style_tags: 0
+remaining_inline_script_blocks: 0
+remaining_actual_base64_images_index: 0
+remaining_actual_base64_images_js: 0
+image_files: 62
