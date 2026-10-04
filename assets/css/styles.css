@@ -296,20 +296,118 @@ body.v14-cinematic-mode #mainContent.shell.v9-screen[data-screen=aperception]{wi
 @media(max-width:700px){#mainContent .v14-cinema.v14-question .v13-actor.nefi{left:calc(50% - 72px);top:106px;bottom:auto;width:144px;height:144px;max-width:none;transform:none!important;translate:none!important}#mainContent .v14-cinema.v14-question .v14-dialog{left:10px;right:10px;bottom:max(10px,env(safe-area-inset-bottom));max-height:calc(100dvh - 268px - env(safe-area-inset-bottom,0px));padding:11px 13px;border-radius:16px}#mainContent .v14-cinema.v14-question .v13-speaker{margin-bottom:7px}#mainContent .v14-cinema.v14-question .v13-speaker strong{font-size:11px;padding:4px 10px}#mainContent .v14-cinema.v14-question .v13-speaker>span{font-size:9px}#mainContent .v14-cinema.v14-question #v13Speech{font-size:14px;line-height:1.45;margin-bottom:8px}#mainContent .v14-cinema.v14-question .v13-prompt{padding:8px 9px}#mainContent .v14-cinema.v14-question .v13-prompt legend,#mainContent .v14-cinema.v14-question .v13-prompt>label{font-size:12px}#mainContent .v14-cinema.v14-question .v13-choices{grid-template-columns:1fr;gap:6px}#mainContent .v14-cinema.v14-question .v13-choices label{font-size:12px}#mainContent .v14-cinema.v14-question .v13-story-actions{margin-top:8px;padding-top:8px}#mainContent .v14-cinema.v14-question .v13-story-actions>span{display:none}#mainContent .v14-cinema.v14-question .v13-prompt-foot .btn{font-size:11px;padding:6px 9px}}
 @media(max-height:500px) and (orientation:landscape){#mainContent .v14-cinema.v14-question .v13-actor.nefi{top:auto;left:2%;bottom:5%;width:27%;height:66%;max-width:340px}#mainContent .v14-cinema.v14-question .v14-dialog{left:32%;right:12px;bottom:8px;max-height:calc(100dvh - 105px);padding:10px 13px}#mainContent .v14-cinema.v14-question #v13Speech{font-size:14px}#mainContent .v14-cinema.v14-question .v13-story-actions>span{display:none}}
 
-/* GitHub Pages cover fix — primary raw GitHub image + local fallback */
-.v8-cover{
+/* Opening screen refresh + cinematic backdrop fix */
+#mainContent.shell.v9-screen[data-screen=opening]{
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:0;
+}
+body[data-route="opening"],body.v8-opening-mode{background:#071824}
+#mainContent.shell.v9-screen[data-screen=opening]>section.v8-cover{
+  min-height:100dvh;
+  border-radius:0;
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-start;
   background-color:#071824;
-  background-image:linear-gradient(90deg,#061a2bed 0%,#061a2bba 36%,transparent 70%),var(--cover),var(--cover-fallback);
-  background-position:center,center,center;
-  background-size:auto,cover,cover;
-  background-repeat:no-repeat,no-repeat,no-repeat;
+  background-image:
+    linear-gradient(180deg,rgba(7,24,36,.10) 0%,rgba(7,24,36,.38) 68%,rgba(7,24,36,.68) 100%),
+    linear-gradient(90deg,rgba(7,24,36,.54) 0%,rgba(7,24,36,.12) 42%,rgba(7,24,36,.03) 70%),
+    var(--cover),
+    var(--cover-fallback);
+  background-position:center center,center center,center center,center center;
+  background-size:cover,cover,cover,cover;
+  background-repeat:no-repeat,no-repeat,no-repeat,no-repeat;
+}
+#mainContent.shell.v9-screen[data-screen=opening] .v8-cover-copy{
+  position:relative;
+  z-index:2;
+  padding:clamp(24px,4vw,44px);
+  max-width:min(640px,100%);
+}
+#mainContent.shell.v9-screen[data-screen=opening] .v8-cover-copy-minimal{
+  display:grid;
+  gap:14px;
+}
+#mainContent.shell.v9-screen[data-screen=opening] .v8-cover-chip{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:max-content;
+  padding:9px 14px;
+  border-radius:999px;
+  background:rgba(7,24,36,.58);
+  border:1px solid rgba(255,255,255,.24);
+  color:#effaff;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  backdrop-filter:blur(8px);
+}
+#mainContent.shell.v9-screen[data-screen=opening] .v8-cover-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+}
+#mainContent.shell.v9-screen[data-screen=opening] .v8-enter,
+#mainContent.shell.v9-screen[data-screen=opening] .v8-enter-secondary{
+  min-height:52px;
+  padding:12px 20px;
+  border-radius:16px;
+  font-size:15px;
+}
+#mainContent.shell.v9-screen[data-screen=opening] .v8-enter-secondary{
+  background:rgba(255,255,255,.16)!important;
+  color:#fff!important;
+  border-color:rgba(255,255,255,.38)!important;
+  backdrop-filter:blur(10px);
+}
+#mainContent.shell.v9-screen[data-screen=opening] .v8-cover-note{
+  display:block;
+  color:#eefcff;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  text-shadow:0 2px 10px rgba(0,0,0,.35);
+}
+#mainContent.shell.v9-screen[data-screen=opening] .v8-cover h1,
+#mainContent.shell.v9-screen[data-screen=opening] .v8-cover p,
+#mainContent.shell.v9-screen[data-screen=opening] .v8-cover-footer,
+#mainContent.shell.v9-screen[data-screen=opening] .v8-kicker{
+  display:none!important;
 }
 @media(max-width:799px){
-  .v8-cover{
-    background-color:#071824;
-    background-image:linear-gradient(0deg,#061a2bf7 0%,#061a2be6 34%,transparent 77%),var(--cover),var(--cover-fallback);
-    background-position:center,72% top,72% top;
-    background-size:auto,auto 68%,auto 68%;
-    background-repeat:no-repeat,no-repeat,no-repeat;
+  #mainContent.shell.v9-screen[data-screen=opening]>section.v8-cover{
+    background-position:center center,center center,63% center,63% center;
+  }
+  #mainContent.shell.v9-screen[data-screen=opening] .v8-cover-copy{
+    width:100%;
+    padding:18px 14px calc(18px + env(safe-area-inset-bottom));
+  }
+  #mainContent.shell.v9-screen[data-screen=opening] .v8-cover-actions{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  #mainContent.shell.v9-screen[data-screen=opening] .v8-enter,
+  #mainContent.shell.v9-screen[data-screen=opening] .v8-enter-secondary{
+    width:100%;
+  }
+  #mainContent.shell.v9-screen[data-screen=opening] .v8-cover-note{
+    font-size:11px;
+    letter-spacing:.06em;
   }
 }
+
+.v14-cinema .v14-backdrop{
+  z-index:0;
+  pointer-events:none;
+  background:linear-gradient(180deg,#f6f7db10 0%,#e1eee712 48%,#54705b60 100%),var(--v14-lab) center 52%/cover no-repeat;
+}
+.v14-cinema .v14-cast{z-index:1}
+.v14-cinema .v14-clue{z-index:2}
+#mainContent .v14-cinema .v14-dialog{z-index:3}
+.v14-cinema .v14-hud{z-index:4}
